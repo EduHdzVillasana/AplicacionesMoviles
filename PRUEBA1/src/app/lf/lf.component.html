@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title >
+     Fisica 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+    
+  <img src="assets/fisica.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+ <h1 style="text-align: center;border-style: inset;border-color: brown;">Objetivo</h1> 
+ <p style="text-align:justify;padding:20px;">Formar profesionales con una preparación general en el área de las ciencias físicas, que les permita participar en el desarrollo científico, tecnológico, docencia e investigación para la sociedad.</p>
+ <h1 style="text-align: center;border-style: inset;border-color: brown;">Duracion</h1> 
+ <p style="text-align:center;padding:20px;">9 semestres</p>
+ <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
+ <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
+ 
+ <p *ngIf="dataReturned">{{dataReturned}}</p>
+
+</ion-content>

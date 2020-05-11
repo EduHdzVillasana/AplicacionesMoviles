@@ -1,0 +1,25 @@
+<ion-app>
+    <ion-menu side="start" class="menu" type="reveal" contentId="content1" >
+        <ion-header>
+          <ion-toolbar class="content">
+            <ion-title >Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content  >
+          <ion-list>
+            <ion-menu-toggle  >
+              <ion-item   [routerLink]="menu.url" *ngFor="let menu of Menu" routerDirection="forward">
+                <ion-icon  [name]="menu.icon" slot="start"></ion-icon>
+                  <ion-label class="label">{{menu.title}}</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+  <ion-router-outlet id="content1"></ion-router-outlet>
+  
+  </ion-app>
+
+
+
+  
