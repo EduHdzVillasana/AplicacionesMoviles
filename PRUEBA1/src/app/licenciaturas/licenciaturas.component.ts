@@ -28,7 +28,7 @@ export class LicenciaturasComponent implements OnInit {
         name: "Ciencias Computacionales",
         image: '../../assets/computacionales.png',
         url:"lcc",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
       {
         name: "Física",
