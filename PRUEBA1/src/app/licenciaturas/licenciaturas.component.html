@@ -1,9 +1,9 @@
 <ion-header>
     <ion-toolbar class="toolbar">
         <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+            <ion-menu-button></ion-menu-button>
         </ion-buttons>
-      <ion-title >LICENCIATURAS</ion-title>
+        <ion-title>Licenciaturas</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content col-12>
@@ -20,22 +20,23 @@
           </ion-item>
     </ion-list> -->
     <ion-grid>
-      <ion-row><!-- size-lg="3" size-md="4" size-sm="6" -->
-        <ion-col size-lg="3" size-md="4" size-sm="1" size="6" *ngFor="let lic of licenciaturas"  >
-          <!-- <div> -->
-            <ion-card  class="card" (click)="info(lic)"  (click)="reproducir(lic)">
-              <ion-card-title class="titulo">
-                {{lic.name}}
-              </ion-card-title>
-              <ion-card-content class="contentcard"  [style.backgroundImage]="'url('+lic.image+')'"  >
-                <!-- <img src="{{lic.image}}" class="image"/> -->
+        <ion-row>
+            <!-- size-lg="3" size-md="4" size-sm="6" -->
+            <ion-col size-lg="3" size-md="4" size-sm="1" size="6" *ngFor="let lic of licenciaturas">
+                <!-- <div> -->
+                <ion-card class="card" (click)="info(lic)" (click)="reproducir(lic)">
+                    <ion-card-title class="titulo">
+                        {{lic.name}}
+                    </ion-card-title>
+                    <ion-card-content class="contentcard" [style.backgroundImage]="'url('+lic.image+')'">
+                        <!-- <img src="{{lic.image}}" class="image"/> -->
 
-              </ion-card-content>
-            </ion-card>
-          <!-- </div> -->
-        </ion-col>
+                    </ion-card-content>
+                </ion-card>
+                <!-- </div> -->
+            </ion-col>
 
-        <!-- <ion-col size="6">
+            <!-- <ion-col size="6">
           <div>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
@@ -55,8 +56,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </div>
         </ion-col> -->
-      </ion-row>
+        </ion-row>
     </ion-grid>
 
 </ion-content>
-
