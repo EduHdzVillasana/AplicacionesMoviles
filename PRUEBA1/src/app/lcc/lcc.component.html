@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
       <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -8,12 +8,10 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  
-<ion-card >
-  <ion-card-title class="ion-text-left" style="margin-left:1.5em;margin-top:1em">
-   Objetivo
-  </ion-card-title>
+<ion-content >
+  <img  src="assets/computacionales.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1> 
+ <ion-card >
   <ion-card-content class="ion-text-justify" style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em" >
      La licenciatura en Ciencias Computacionales tiene como 
      objetivo formar profesionales capaces de desarrollar, analizar
@@ -24,10 +22,8 @@
      como privado.
   </ion-card-content>
 </ion-card>
- <ion-card >
-  <ion-card-title class="ion-text-left"  style="margin-left:1.5em;margin-top:1em" >
-   Cualidades de los aspirantes
-  </ion-card-title>
+<h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Cualidades de los aspirantes</h1> 
+<ion-card >
   <ion-card-content class="ion-text-justify"   style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em">
      <li>Conocimientos de matemáticas del nivel medio superior</li>
      <li>Demostrar capacidad para la concentración a largo plazo</li>
@@ -38,8 +34,11 @@
 
   </ion-card-content>
 </ion-card>
-<p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;" href="http://www.fcfm.uanl.mx/es/licenciatura/plandeestudios/LCC2017">9 semestres</ion-button></p>
-<p style="text-align:center" >  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
-<p *ngIf="dataReturned">{{dataReturned}}</p>
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Duracion</h1> 
+ <ion-card style="text-align:center;padding:20px;">9 semestres</ion-card>
+ <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
+ <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
+ 
+ <p *ngIf="dataReturned">{{dataReturned}}</p>
 
 </ion-content>
