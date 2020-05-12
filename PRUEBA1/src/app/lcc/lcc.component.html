@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
       <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -9,31 +9,36 @@
   </ion-toolbar>
 </ion-header>
 <ion-content >
-    
-  <img src="assets/lcc.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Objetivo</h1> 
- <p style="text-align:justify;padding:20px;">La licenciatura en Ciencias Computacionales tiene como 
-  objetivo formar profesionales capaces de desarrollar, analizar
-  y diseñar soluciones tecnológicas innovadoras mediante 
-  la utilización de modelos matemáticos. Además, el egresado 
-  podrá administrar proyectos, diseñar estrategias, metodologías o herramientas para
-  desempeñarse en el campo laboral tecnológico tanto público
-  como privado.
-  
-  El aspirante debe poseer varias cualidades:
-  
-  -Conocimientos de matemáticas del nivel medio superior
-  -Demostrar capacidad para la concentración a largo plazo
-  -Ser perseverante al resolucionar problemas
-  -Aptitud para el trabajo metódico y disciplinado
-  -Demostrar responsabilidad y proactividad ante situaciones adversas
-  -Tener interés para aplicar conocimientos a problemas reales</p>
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Duracion</h1> 
- <p style="text-align:center;padding:20px;">9 semestres</p>
+  <img  src="assets/computacionales.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1> 
+ <ion-card >
+  <ion-card-content class="ion-text-justify" style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em" >
+     La licenciatura en Ciencias Computacionales tiene como 
+     objetivo formar profesionales capaces de desarrollar, analizar
+     y diseñar soluciones tecnológicas innovadoras mediante 
+     la utilización de modelos matemáticos. Además, el egresado 
+     podrá administrar proyectos, diseñar estrategias, metodologías o herramientas para
+     desempeñarse en el campo laboral tecnológico tanto público
+     como privado.
+  </ion-card-content>
+</ion-card>
+<h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Cualidades de los aspirantes</h1> 
+<ion-card >
+  <ion-card-content class="ion-text-justify"   style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em">
+     <li>Conocimientos de matemáticas del nivel medio superior</li>
+     <li>Demostrar capacidad para la concentración a largo plazo</li>
+     <li>Ser perseverante al resolucionar problemas</li>
+     <li>Aptitud para el trabajo metódico y disciplinado</li>
+     <li>Demostrar responsabilidad y proactividad ante situaciones adversas</li>
+     <li style="margin-bottom:1em">Tener interés para aplicar conocimientos a problemas reales</li>
+
+  </ion-card-content>
+</ion-card>
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Duracion</h1> 
+ <ion-card style="text-align:center;padding:20px;">9 semestres</ion-card>
  <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
  <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
-<!-- <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;">Reproducir Multimedia</ion-button></p>  -->
-
+ 
  <p *ngIf="dataReturned">{{dataReturned}}</p>
 
 </ion-content>

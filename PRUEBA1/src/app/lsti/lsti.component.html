@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
       <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -10,14 +10,28 @@
 </ion-header>
 <ion-content >
     
-  <img src="assets/seguridad.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Objetivo</h1> 
- <p style="text-align:justify;padding:20px;">Formar profesionales en la Licenciatura en Seguridad en Tecnologías de Información con sentido humanista, creativo e innovador, capaces de generar, difundir y aplicar el conocimiento para responder a las demandas del desarrollo científico, tecnológico, económico y social de la región y del país en el contexto internacional.</p>
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Duracion</h1> 
- <p style="text-align:center;padding:20px;">9 semestres</p>
+<img src="assets/seguridad.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1> 
+ <ion-card >
+  <ion-card-content class="ion-text-justify" style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em" >
+    Formar profesionales en la Licenciatura en Seguridad en Tecnologías de Información con sentido humanista, creativo e innovador, capaces de generar, difundir y aplicar el conocimiento para responder a las demandas del desarrollo científico, tecnológico, económico y social de la región y del país en el contexto internacional.
+  </ion-card-content>
+</ion-card>
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">  Cualidades de los aspirantes</h1>
+ <ion-card >
+  <ion-card-content class="ion-text-justify"   style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em">
+     <li>Interés de incursionar en las nuevas tecnologías computacionales.</li>
+     <li>Sustentar una postura personal sobre temas de interés y relevancia general.</li>
+     <li style="margin-bottom:1em">Interés de seguir actualizándose en temáticas de la disciplina.</li>
+  </ion-card-content>
+</ion-card> 
+ <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Duracion</h1>
+ <ion-card style="text-align:center;padding:20px;">10 semestres</ion-card>
  <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
  <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
  
  <p *ngIf="dataReturned">{{dataReturned}}</p>
 
 </ion-content>
+
+

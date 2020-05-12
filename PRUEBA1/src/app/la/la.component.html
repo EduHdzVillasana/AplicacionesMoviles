@@ -1,24 +1,41 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-      <ion-title >
-       Actuaria
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content >
-    
-    <img src="assets/actuaria.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
-   <h1 style="text-align: center;border-style: inset;border-color: brown;">Objetivo</h1> 
-   <p style="text-align:justify;padding:20px;">Formar Licenciados en Actuaría apegados a los lineamientos educativos internacionales del gremio actuarial en base a los Modelos Educativo y Académico de la UANL.</p>
-   <h1 style="text-align: center;border-style: inset;border-color: brown;">Duracion</h1> 
-   <p style="text-align:center;padding:20px;">9 semestres</p>
-   <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
-   <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
-   
-   <p *ngIf="dataReturned">{{dataReturned}}</p>
- 
-  </ion-content>
+  <ion-toolbar class="toolbar">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title >
+     Actuaria
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content >
+  
+  <img  src="assets/actuaria.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+  <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1> 
+  <ion-card style="text-align:justify;padding:20px;">Formar Licenciados en Actuaría apegados a los lineamientos educativos internacionales del gremio actuarial en base a los Modelos Educativo y Académico de la UANL.</ion-card>
+  <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content"> Cualidades de los aspirantes</h1> 
+  <ion-card >
+    
+    <ion-card-content class="ion-text-justify"   style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em">
+      <li>Posee conocimientos en álgebra, cálculo diferencial e integral y geometría analítica a nivel bachillerato.</li>
+      <li>Demuestra capacidad para la concentración y el trabajo durante largos periodos de tiempo.</li>
+      <li>Es tenaz y perseverante al analizar y resolver problemas.</li>
+      <li>Es creativo.</li>
+      <li>Posee marcado gusto por el estudio.</li>
+      <li>Tiene interés profundo en la aplicación de los conocimientos a problemas reales.</li>
+      <li>Posee aptitud de trabajo metódico y disciplinado.</li>
+     <li>Demuestra actitud proactiva y responsable ante los retos en situaciones adversas.</li>
+      <li style="margin-bottom:1em">Mantiene una actitud orientada hacia la solución de problemas</li>
+    </ion-card-content>
+  </ion-card>
+  <h1 style="text-align: center;border-style: inset;border-color: brown;"  class="content">Duracion</h1> 
+  <ion-card style="text-align:center;padding:20px;">9 semestres</ion-card>
+  <p style="text-align:center;"><ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
+  <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
+  
+  
+
+
+
+</ion-content>
