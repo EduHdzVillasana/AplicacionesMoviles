@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'concurso-in', loadChildren: () => import('./concurso-in/concurso-in.module').then( m => m.ConcursoInModule)},
   { path: 'solicitar-inf', loadChildren: () => import('./solicitar-inf/solicitar-inf.module').then( m => m.SolicitarInfModule)},
   { path: 'modal-actuaria', loadChildren: () => import('./modal-actuaria/modal-actuaria.module').then( m => m.ModalActuariaModule)},
-  { path: 'contacto', loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoModule)}
+  { path: 'contacto', loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoModule)},
+  { path: 'como-llegar', loadChildren: () => import('./como-llegar/como-llegar.module').then( m => m.ComoLlegarModule)}
   
 
 
