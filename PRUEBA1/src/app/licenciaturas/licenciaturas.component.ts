@@ -22,7 +22,7 @@ export class LicenciaturasComponent implements OnInit {
         image: '../../assets/actuaria.png',
         url:"la",
         color:"rgba(7, 55, 211, 0.829);",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
       {
         name: "Ciencias Computacionales",
@@ -34,25 +34,25 @@ export class LicenciaturasComponent implements OnInit {
         name: "Física",
         image: '../../assets/fisica.png',
         url:"lf",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
       {
         name: "Matemáticas",
         image: '../../assets/matematicas.png',
         url:"lm",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
       {
         name: "Multimedia y Animación Digital",
         image: '../../assets/multimedia.png',
         url:"lmya",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
       {
         name: "Seguridad en Tecnologías de la Información",
         image: '../../assets/seguridad.png',
         url:"lsti",
-        voz:"lcc.mp3"
+        voz:"../../assets/lcc.mp3"
       },
     ]
   }
