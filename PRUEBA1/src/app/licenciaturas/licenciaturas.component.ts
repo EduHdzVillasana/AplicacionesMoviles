@@ -54,5 +54,14 @@ export class LicenciaturasComponent implements OnInit {
   info(menu){
     this.route.navigate([menu.url]);
   }
- 
+   
+  reproducir(lic)
+  {
+    
+    let reproducir=new Audio();
+    reproducir.src=lic.voz;
+    reproducir.load()
+    reproducir.play()
+
+}
 }
