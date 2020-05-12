@@ -1,30 +1,39 @@
-.informacion 
-{
+.informacion {
     color: black;
-    text-align:justify;
+    text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
 }
-.titulo
-{
+
+.titulo {
     color: black;
-    text-align:center;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top:10px;
+    margin-top: 10px;
 }
-.imagen
-{
+
+.imagen {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top:10px;
+    margin-top: 10px;
 }
-.toolbar
-{
-    --background:  rgba(7, 55, 211, 0.829);
+
+.toolbar {
+    --background: rgba(7, 55, 211, 0.829);
     font-family: Arial, Helvetica, sans-serif;
     color: cornsilk;
 }
-.card
-{
-    --background:rgba(235, 199, 199, 0.185);
+
+.card {
+    --background: rgba(235, 199, 199, 0.185);
+}
+
+.serif {
+    font-family: "Times New Roman", Times, serif;
+    text-align: justify;
+}
+
+.title {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
 }
