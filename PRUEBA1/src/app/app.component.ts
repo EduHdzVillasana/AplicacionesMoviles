@@ -49,6 +49,11 @@ export class AppComponent {
         title: "Solicitar Informacion",
         icon : "help",
         url: "solicitar-inf"
+      },
+      {
+        title: "¿Cómo llegar?",
+        icon : "compass",
+        url: "como-llegar"
       }
 
     ]

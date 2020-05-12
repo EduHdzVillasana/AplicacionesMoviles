@@ -17,6 +17,7 @@ import{ModalLmyaModule}from './modal-lmya/modal-lmya.module'
 import{ModalLstiModule} from './modal-lsti/modal-lsti.module'
 import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.module'
 
+
 @NgModule({
   declarations: [
     AppComponent,
