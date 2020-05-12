@@ -18,7 +18,7 @@ export class LicenciaturasComponent implements OnInit {
   menulicenciaturas(){
     this.licenciaturas=[
       {
-        name: "Actuaria",
+        name: "Actuaría",
         image: '../../assets/actuaria.png',
         url:"la",
         color:"rgba(7, 55, 211, 0.829);",
@@ -29,22 +29,22 @@ export class LicenciaturasComponent implements OnInit {
         url:"lcc"
       },
       {
-        name: "Fisica",
+        name: "Física",
         image: '../../assets/fisica.png',
         url:"lf"
       },
       {
-        name: "Matematicas",
+        name: "Matemáticas",
         image: '../../assets/matematicas.png',
         url:"lm"
       },
       {
-        name: "Multimiedia y Animacion Digital",
+        name: "Multimedia y Animación Digital",
         image: '../../assets/multimedia.png',
         url:"lmya"
       },
       {
-        name: "Seguridad en Tecnologias de la Informacion",
+        name: "Seguridad en Tecnologías de la Información",
         image: '../../assets/seguridad.png',
         url:"lsti"
       },

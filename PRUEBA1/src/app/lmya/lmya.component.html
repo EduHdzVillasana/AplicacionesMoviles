@@ -4,20 +4,42 @@
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
     <ion-title >
-     Multimedia y Animacion Digital
+     Multimedia y Animación Digital
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content >
     
-  <img src="assets/multimedia.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Objetivo</h1> 
- <p style="text-align:justify;padding:20px;">Formar profesionistas capaces de diseñar aplicaciones enfocadas a cubrir necesidades de la industria del arte digital y medios interactivos, haciendo uso de TICs y arte gráfico, para los sectores público y privado.</p>
- <h1 style="text-align: center;border-style: inset;border-color: brown;">Duracion</h1> 
- <p style="text-align:center;padding:20px;">9 semestres</p>
- <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
- <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
- 
- <p *ngIf="dataReturned">{{dataReturned}}</p>
 
-</ion-content>
+  <ion-content>
+    <ion-card >
+      <ion-card-title class="ion-text-left" style="margin-left:1.5em;margin-top:1em">
+       Objetivo
+      </ion-card-title>
+      <ion-card-content class="ion-text-justify" style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em" >
+        Formar Licenciados en Multimedia y Animación Digital con un perfil integral; altamente competentes en el mundo laboral; capaces de entender holísticamente la realidad; con plena conciencia de la situación regional, nacional y mundial; comprometidos con el desarrollo sustentable, económico, tecnológico y social de la humanidad; capaces de estudiar, plantear y formular nuevas soluciones de interpretación y proyección de la información; así como los nichos de mercado del entretenimiento a través de las tecnologías digitales, con el fin de proveer propuestas y rutas para la generación de la nueva realidad del arte digital y las comunicaciones electrónicas, en el ámbito nacional e internacional.
+      </ion-card-content>
+    </ion-card>
+     <ion-card >
+      <ion-card-title class="ion-text-left"  style="margin-left:1.5em;margin-top:1em" >
+       Cualidades de los aspirantes
+      </ion-card-title>
+      <ion-card-content class="ion-text-justify"   style="margin-left:1.5em;margin-top:.2em;margin-bottom:1em">
+        <li>Demuestra capacidad para la concentración y el trabajo durante largos periodos de tiempo.</li>
+        <li>Es tenaz y perseverante al analizar y resolver problemas.</li>
+        <li>Es creativo</li>
+        <li>Posee marcado gusto por el estudio.</li>
+        <li>Tiene interés profundo en la aplicación de los conocimientos a problemas reales.</li>
+        <li> Posee aptitud de trabajo metódico y disciplinado.</li>
+        <li>Demuestra actitud proactiva y responsable ante los retos en situaciones adversas.</li>
+        <li>Mantiene una actitud orientada hacia la solución de problemas.</li>
+        <li>Es capaz de sostener relaciones interpersonales positivas para el mejor resultado en trabajo de equipo.</li>
+        <li style="margin-bottom:1em">Posee marcado interés por el arte digital en su expresión creativa, interpretativa o de su fundamento tecnológico actual.</li>
+    
+      </ion-card-content>
+    </ion-card>
+    <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;" href="https://www.uanl.mx/wp-content/uploads/2018/08/Lic-Multimedia-y-animacion-digital-plan-de-estudios.pdf">9 semestres</ion-button></p>
+    <p style="text-align:center" >  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
+    <p *ngIf="dataReturned">{{dataReturned}}</p>
+    
+  </ion-content>
