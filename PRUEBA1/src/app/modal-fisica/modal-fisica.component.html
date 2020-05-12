@@ -1,7 +1,9 @@
 <ion-header>
-  <ion-toolbar >
+  <ion-toolbar class="toolbar" >
     <ion-title>{{modalTitle}}</ion-title>
-    <ion-button slot="end" fill="clear" (click)="closeModal()">Cerrar</ion-button>
+    <ion-button slot="end" fill="clear" (click)="closeModal()">
+      <ion-icon name="close-circle-outline" size="large" color="medium"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -10,30 +12,34 @@
   <ion-item>
     <ion-label class="ion-text-wrap">
       <ion-text >
-        <h1>1.{{paramempleo1}}</h1>
+        <h1>{{paramempleo1}}</h1>
       </ion-text>
     </ion-label>
+    <ion-note slot="start" color="primary" style="font-size: 20px;">1</ion-note>
   </ion-item>
   <ion-item>
     <ion-label class="ion-text-wrap">
       <ion-text >
-        <h1>2.{{paramempleo2}}</h1>
+        <h1>{{paramempleo2}}</h1>
       </ion-text>
     </ion-label>
+    <ion-note slot="start" color="primary" style="font-size: 20px;">2</ion-note>
   </ion-item>
   <ion-item>
     <ion-label class="ion-text-wrap">
       <ion-text >
-        <h1>3.{{paramempleo3}}</h1>
+        <h1>{{paramempleo3}}</h1>
       </ion-text>
     </ion-label>
+    <ion-note slot="start" color="primary" style="font-size: 20px;">3</ion-note>
   </ion-item>
   <ion-item>
     <ion-label class="ion-text-wrap">
       <ion-text >
-        <h1>4.{{paramempleo4}}</h1>
+        <h1>{{paramempleo4}}</h1>
       </ion-text>
     </ion-label>
+    <ion-note slot="start" color="primary" style="font-size: 20px;">4</ion-note>
   </ion-item>
  
   
