@@ -40,7 +40,7 @@ export class LicenciaturasComponent implements OnInit {
         name: "Matemáticas",
         image: '../../assets/matematicas.png',
         url:"lm",
-        voz:"../../assets/lcc.mp3"
+        voz:"../../assets/lm.m4a"
       },
       {
         name: "Multimedia y Animación Digital",

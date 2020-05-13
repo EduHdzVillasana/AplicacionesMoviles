@@ -1,85 +1,93 @@
 <ion-header>
     <ion-toolbar class="toolbar">
         <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
+            <ion-menu-button></ion-menu-button>
         </ion-buttons>
-      <ion-title >
-       Matematicas
-      </ion-title>
+        <ion-title>
+            Matematicas
+        </ion-title>
     </ion-toolbar>
 </ion-header>
-<ion-content >
-  <ion-card>
-    <ion-card-content>
-      <img src="assets/matematicas.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">    </ion-card-content>
-  </ion-card>   
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title><h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1> </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label class="ion-text-wrap" style="text-align: center;">
-          Formar Licenciados en Matemáticas con un perfil integral y sentido de responsabilidad social, capaces de validar y analizar teorías matemáticas a través del pensamiento lógico-matemático; plantear, modelar y resolver problemas reales con aplicaciones en la industria y en las ciencias físicas, biológicas y sociales; así como propiciar el pensamiento matemático mediante procesos de enseñanza aprendizaje. Son distinguidos por colaborar en proyectos de investigación de forma ética, en equipos interdisciplinarios y utilizar tecnologías de vanguardia. Los Licenciados en Matemáticas contribuyen al avance de la ciencia y su aplicación en beneficio de diferentes sectores gubernamentales y la industria privada.
-      </ion-label>
-      </ion-item>
-      
-    </ion-card-content>
-  </ion-card>
-  <ion-card >
-    <ion-card-header>
-      <ion-card-title><h1 style="text-align: center;border-style: inset;border-color: brown;" class="content"> Cualidades de los aspirantes</h1></ion-card-title>
-    </ion-card-header>
-    <ion-card-content >
-      <ion-list>
-        <ion-item >
-          <ion-label class="ion-text-wrap">
-            Tener gusto por la ciencia y la tecnología.
-          </ion-label>
-          <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
-        </ion-item>
-        <ion-item >
-          <ion-label class="ion-text-wrap">
-            Tener gusto por las matemáticas.
-          </ion-label>
-          <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
-        </ion-item>
-        <ion-item >
-          <ion-label class="ion-text-wrap">
-            Aptitudes e interés por el trabajo teórico, los avances en la tecnología y la resolución de problemas.
-          </ion-label>
-          <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
-        </ion-item>
-        <ion-item >
-          <ion-label class="ion-text-wrap">
-            Capacidad de autoestudio.
-          </ion-label>
-          <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
-        </ion-item>
-        <ion-item >
-          <ion-label class="ion-text-wrap">
-            Capacidad de análisis y síntesis.
-          </ion-label>
-          <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title><h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Duracion</h1> </ion-card-title>
-    </ion-card-header>
-    <ion-card-content style="text-align: center;">
-      <ion-item style="text-align: center;">
-        <ion-label>9 semestres</ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <p style="text-align:center;">  <ion-button fill="outline" color="brown" style="color: brown;"(click)="openModal()">Empleo de los egresados</ion-button></p>
-  </ion-card>
-   <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
-   
-   <p *ngIf="dataReturned">{{dataReturned}}</p>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <img src="assets/matematicas.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;"> </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Objetivo</h1>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+                <ion-label class="ion-text-wrap" style="text-align: center;">
+                    Formar profesionales capaces de utilizar herramientas matemáticas con el fin de contribuir a la resolución de problemas que requieran del empleo de procesos matemáticos, a la elaboración y/o aplicación de modelos matemáticos y al enriquecimiento de la
+                    cultura, todo esto en los ámbitos académico, industrial y de servicios.
+                </ion-label>
+            </ion-item>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content"> Cualidades de los aspirantes</h1>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        Tener gusto por la ciencia y la tecnología.
+                    </ion-label>
+                    <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        Tener gusto por las matemáticas.
+                    </ion-label>
+                    <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        Aptitudes e interés por el trabajo teórico, los avances en la tecnología y la resolución de problemas.
+                    </ion-label>
+                    <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        Capacidad de autoestudio.
+                    </ion-label>
+                    <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        Capacidad de análisis y síntesis.
+                    </ion-label>
+                    <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                <h1 style="text-align: center;border-style: inset;border-color: brown;" class="content">Duracion</h1>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content style="text-align: center;">
+            <ion-item style="text-align: center;">
+                <ion-label>9 semestres</ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <p style="text-align:center;">
+            <ion-button fill="outline" color="brown" style="color: brown;" (click)="openModal()">Empleo de los egresados</ion-button>
+        </p>
+    </ion-card>
+    <!-- <h1  style="text-align: center;border-style: inset;border-color: brown;">Empleo de los egresados de esta carrera</h1> -->
+
+    <p *ngIf="dataReturned">{{dataReturned}}</p>
 </ion-content>
-  
