@@ -22,7 +22,7 @@ export class LicenciaturasComponent implements OnInit {
         image: '../../assets/actuaria.png',
         url:"la",
         color:"rgba(7, 55, 211, 0.829);",
-        voz:"../../assets/lcc.mp3"
+        voz:"../../assets/la.mpeg"
       },
       {
         name: "Ciencias Computacionales",
