@@ -54,6 +54,11 @@ export class AppComponent {
         title: "¿Cómo llegar?",
         icon : "compass",
         url: "como-llegar"
+      },
+      {
+        title: "Contacto",
+        icon : "call-outline",
+        url: "contacto"
       }
 
     ]
