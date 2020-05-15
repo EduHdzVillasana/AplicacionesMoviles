@@ -23,8 +23,16 @@
             <ion-card-content class="slidesdescription" >
               <span >
                 <br><ion-text color="dark">
-                  <b>1. Ingresar a la página oficial de la UANL</b>
-                https://www.uanl.mx/tramites/concurso-de-ingreso-a-licenciatura/.<br><br>
+                  <b>1. Ingresar a la página oficial de la UANL, Concurso de ingreso a licenciatura</b>
+                  <ion-card-subtitle class="notas"><ion-text color="dark">
+                    www.uanl.mx > Aspirantes >
+                    Licenciatura > Concurso de ingreso a
+                    licenciatura </ion-text> </ion-card-subtitle>
+                
+
+                <ion-button (click)="GoToIngreso()" expand="block" class="miBoton" color="dark" fill="solid" size="small" shape="round">Ir a "Concurso de <br> Ingreso a Licenciatura"</ion-button>
+
+                <br>
                 <b>2.</b> Después de leer la convocatoria, <b>acceder
                 a la liga de acceso al REGISTRO PARA EL
                 EXAMEN</b>, capturar la información
@@ -80,11 +88,11 @@
               <span>
                 Aspirantes a ingresar a las siguientes
                 carreras:<br> • Lic. en Matemáticas<br>
-                • Lic. en Física<br>
-                • Lic. en Ciencias Computacionales<br>
-                • Lic. en Actuaría<br>
-                • Lic. en Multimedia y Animación Digital<br>
-                • Lic. en Seguridad en Tecnologías de Información<br>
+                <b>•</b> Lic. en Física<br>
+                <b>•</b> Lic. en Ciencias Computacionales<br>
+                <b>•</b> Lic. en Actuaría<br>
+                <b>•</b> Lic. en Multimedia y Animación Digital<br>
+                <b>•</b> Lic. en Seguridad en Tecnologías de Información<br>
               </span>
             </ion-text>
          </ion-card-content> 
@@ -127,9 +135,9 @@
             licenciatura > Documentos relacionados >
             Guía del examen Exani II de Ceneval</ion-text> </ion-card-subtitle>
             
-            <br>o bien ingrese en la siguiente página:<br>
-           <mark>www.uanl.mx/wp-content/uploads/
-            2020/01/Guia-EXANI-II-25a-edicion2020.pdf</mark></ion-text>
+            <ion-button (click)="GoToExani()" expand="block" class="miBoton" color="dark" fill="solid" size="small" shape="round">Ir a "Guía de EXANI II Ceneval"</ion-button>
+
+          </ion-text>
           </span>
             
         </ion-card-content> 
