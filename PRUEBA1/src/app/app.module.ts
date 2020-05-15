@@ -15,7 +15,8 @@ import {ModalComputacionalesModule} from './modal-computacionales/modal-computac
 import{ModalFisicaModule} from './modal-fisica/modal-fisica.module'
 import{ModalLmyaModule}from './modal-lmya/modal-lmya.module'
 import{ModalLstiModule} from './modal-lsti/modal-lsti.module'
-import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.module'
+import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.module';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.modul
     Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: Camera, useClass: CameraMock},
+    InAppBrowser,
   ],
   bootstrap: [AppComponent]
 })
