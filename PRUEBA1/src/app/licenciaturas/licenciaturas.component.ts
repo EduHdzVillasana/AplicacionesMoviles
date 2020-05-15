@@ -34,7 +34,7 @@ export class LicenciaturasComponent implements OnInit {
         name: "Física",
         image: '../../assets/fisica.png',
         url:"lf",
-        voz:"../../assets/lcc.mp3"
+        voz:"../../assets/fisica.wav"
       },
       {
         name: "Matemáticas",
