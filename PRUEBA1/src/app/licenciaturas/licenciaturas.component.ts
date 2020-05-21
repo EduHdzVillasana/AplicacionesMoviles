@@ -46,7 +46,7 @@ export class LicenciaturasComponent implements OnInit {
         name: "Multimedia y Animación Digital",
         image: '../../assets/multimedia.png',
         url:"lmya",
-        voz:"../../assets/lcc.mp3"
+        voz:"../../assets/lmad.mp3"
       },
       {
         name: "Seguridad en Tecnologías de la Información",
