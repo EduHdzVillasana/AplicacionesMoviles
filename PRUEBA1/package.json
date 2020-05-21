@@ -22,8 +22,6 @@
     "@capacitor/core": "1.5.2",
     "@ionic-native/camera": "^5.23.0",
     "@ionic-native/core": "^5.0.0",
-    "@ionic-native/email-composer": "^5.25.0",
-    "@ionic-native/in-app-browser": "^5.25.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
@@ -78,9 +76,7 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-camera": {
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
-      "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-email-composer": {}
+      }
     },
     "platforms": [
       "android"
