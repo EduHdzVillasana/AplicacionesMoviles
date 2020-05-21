@@ -12,7 +12,41 @@
   <ion-card>
     <ion-card-content>
       <img  src="assets/computacionales.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+      <ion-list *ngFor="let track of playlist">
+        <ion-button [color]="track==activeTrack ? 'tertiary' : 'dark'" expand="block" class="botonChiquito" (click)="start(track)">
+            Escuchar sobre la Licenciatura
+        </ion-button>
+      </ion-list>
     </ion-card-content>
+
+    <ion-footer *ngIf="activeTrack">
+      <ion-toolbar color="dark">
+        <ion-row>
+
+          <ion-col size="12">
+            <ion-range #range [(ngModel)]="progress" max="100" color="tertiary" (touchend)="seek()" (mouseup)="seek()"></ion-range>
+          </ion-col>
+
+          <ion-col size="12" class="ion-text-center">
+            {{activeTrack.name}}
+          </ion-col>
+
+          <ion-col size="12" class="ion-text-center">
+
+            <ion-button fill="clear" (click)="tooglePlayer(false)" *ngIf="!isPlaying" color="light">
+              <ion-icon slot="icon-only" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="tooglePlayer(true)" *ngIf="  isPlaying" color="light">
+              <ion-icon slot="icon-only" name="pause"></ion-icon>
+            </ion-button>
+
+          </ion-col>
+          
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
+
   </ion-card> 
   <ion-card>
     <ion-card-header>
@@ -20,7 +54,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label class="ion-text-wrap">
+        <ion-label class="ion-text-wrap" style="text-align:justify;">
           La licenciatura en Ciencias Computacionales tiene como 
           objetivo formar profesionales capaces de desarrollar, analizar
           y diseñar soluciones tecnológicas innovadoras mediante 
@@ -37,40 +71,40 @@
     <ion-card-header>
       <ion-card-title><h1 style="text-align: center;border-style: inset;border-color: brown;" class="content"> Cualidades de los aspirantes</h1></ion-card-title>
     </ion-card-header>
-    <ion-card-content >
+    <ion-card-content  >
       <ion-list>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Conocimientos de matemáticas del nivel medio superior
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Ser perseverante al resolucionar problemas
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Demostrar capacidad para la concentración a largo plazo
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Aptitud para el trabajo metódico y disciplinado
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Demostrar responsabilidad y proactividad ante situaciones adversas
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Tener interés para aplicar conocimientos a problemas reales
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>

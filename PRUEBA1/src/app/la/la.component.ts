@@ -1,7 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { ModalController,IonRange } from '@ionic/angular';
 import { ModalActuariaComponent} from '../modal-actuaria/modal-actuaria.component';
+import {Howl} from 'howler';
 
+
+/////////////////////////////////////////
+export interface Track{//////////////////
+  name: string;//////////////////////////
+  path: string;//////////////////////////
+}
+////////////////////////////////////////
 
 
 @Component({
@@ -10,6 +18,63 @@ import { ModalActuariaComponent} from '../modal-actuaria/modal-actuaria.componen
   styleUrls: ['./la.component.scss'],
 })
 export class LAComponent implements OnInit {
+  /////////////////////////////////////////////////////////
+  
+playlist: Track[]=[
+  {
+    name: 'Licenciatura en Actuaría',
+    path: 'assets/la.mpeg'
+  }
+];
+
+activeTrack: Track=null;
+player: Howl=null;
+isPlaying=false;
+progress=0;
+@ViewChild('range',{static:false})range:IonRange;
+
+start(track:Track){
+  if(this.player){
+    this.player.stop();
+  }
+  this.player=new Howl({
+    src:[track.path],
+    html5:true,
+    onplay: ()=>{
+      console.log('onPlay');
+      this.isPlaying=true;
+      this.activeTrack=track;
+      this.updateProgress();
+    },
+    onend: ()=>{
+      console.log('onEnd');
+    }
+  });
+  this.player.play();
+}
+tooglePlayer(pause){
+  this.isPlaying=!pause;
+  if(pause){
+    this.player.pause();
+  }else{
+    this.player.play();
+  }
+
+}
+seek(){
+  let newValue=+this.range.value;
+  let duration=this.player.duration();
+  this.player.seek(duration*(newValue/100));
+}
+updateProgress(){
+  let seek=this.player.seek();
+  this.progress=(seek/this.player.duration())*100||0;
+  setTimeout(()=>{
+    this.updateProgress();
+  },1000)
+}
+
+/////////////////////////////////////////////////////////
   dataReturned:any;
   constructor(
     public modalController: ModalController

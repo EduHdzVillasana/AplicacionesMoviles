@@ -15,7 +15,39 @@
   <ion-card>
     <ion-card-content>
       <img  src="assets/actuaria.png" style="display: block;margin-left: auto;margin-right: auto;margin-top:10px;">
+      <ion-list *ngFor="let track of playlist">
+        <ion-button [color]="track==activeTrack ? 'tertiary' : 'dark'" expand="block" class="botonChiquito" (click)="start(track)">
+            Escuchar sobre la Licenciatura
+        </ion-button>
+      </ion-list>
     </ion-card-content>
+    <ion-footer *ngIf="activeTrack">
+      <ion-toolbar color="dark">
+        <ion-row>
+
+          <ion-col size="12">
+            <ion-range #range [(ngModel)]="progress" max="100" color="tertiary" (touchend)="seek()" (mouseup)="seek()"></ion-range>
+          </ion-col>
+
+          <ion-col size="12" class="ion-text-center">
+            {{activeTrack.name}}
+          </ion-col>
+
+          <ion-col size="12" class="ion-text-center">
+
+            <ion-button fill="clear" (click)="tooglePlayer(false)" *ngIf="!isPlaying" color="light">
+              <ion-icon slot="icon-only" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="tooglePlayer(true)" *ngIf="  isPlaying" color="light">
+              <ion-icon slot="icon-only" name="pause"></ion-icon>
+            </ion-button>
+
+          </ion-col>
+          
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
   </ion-card>
   <ion-card>
     <ion-card-header>
@@ -23,7 +55,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label class="ion-text-wrap">
+        <ion-label class="ion-text-wrap" style="text-align:justify;">
           Formar Licenciados en Actuaría apegados a los lineamientos educativos internacionales del gremio actuarial en base a los Modelos Educativo y Académico de la UANL.
         </ion-label>
       </ion-item>
@@ -37,56 +69,56 @@
     <ion-card-content >
       <ion-list>
         <ion-item >
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Posee conocimientos en álgebra, cálculo diferencial e integral
             y geometría analítica a nivel bachillerato.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Demuestra capacidad para la concentración y el trabajo durante largos periodos de tiempo.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Es tenaz y perseverante al analizar y resolver problemas.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Es creativo.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Posee marcado gusto por el estudio.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Tiene interés profundo en la aplicación de los conocimientos a problemas reales.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Posee aptitud de trabajo metódico y disciplinado.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Demuestra actitud proactiva y responsable ante los retos en situaciones adversas.
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-label class="ion-text-wrap">
+          <ion-label class="ion-text-wrap" style="text-align:justify;">
             Mantiene una actitud orientada hacia la solución de problemas
           </ion-label>
           <ion-icon name="checkmark-sharp" slot="start"></ion-icon>
