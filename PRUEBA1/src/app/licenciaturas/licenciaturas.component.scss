@@ -8,27 +8,24 @@
 .contentcard
 {
     width: auto;
-    height: 100%;
+    height:95%;
     
 }
 .titulo
 {
     color: black;
-    text-align:center;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10;
-    margin-top:10px;
-    min-height: 100px;
+    font-size: 20px;
+    margin-top:20px;
+    min-height: 50px;
 }
 .card
 {
-    // background:rgba(235, 199, 199, 0.185);
     width:94%; 
-    height: 300px;
 }
 .image {
     width:100%;
     height: 100%;
+    margin-bottom:7px;
 }
-
-  

@@ -67,13 +67,13 @@
   --ion-color-medium-shade: #808289;
   --ion-color-medium-tint: #9d9fa6;
 
-  /** light **/
-  --ion-color-light: #f4f5f8;
-  --ion-color-light-rgb: 244, 245, 248;
+  /** light (Se cambió este color para usarse en las cards de licenciaturas)**/
+  --ion-color-light: #e4eeff;
+  --ion-color-light-rgb: 228,238,255;
   --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0, 0, 0;
-  --ion-color-light-shade: #d7d8da;
-  --ion-color-light-tint: #f5f6f9;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #c9d1e0;
+  --ion-color-light-tint: #e7f0ff;
 }
 
 @media (prefers-color-scheme: dark) {
