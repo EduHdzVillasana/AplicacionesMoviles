@@ -32,8 +32,8 @@ export class SolicitarInfComponent implements OnInit {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       
-      // const base64Image = 'data:image/jpeg;base64,' + imageData;
-      const base64Image = imageData;
+      const base64Image = 'data:image/jpeg;base64,' + imageData;
+      // const base64Image = imageData;
       this.image = base64Image;
       console.log(this.image);
             }
