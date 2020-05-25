@@ -20,7 +20,7 @@ export class LstiComponent implements OnInit {
 playlist: Track[]=[
   {
     name: 'Licenciatura de Seguridad en Tecnologías de la Información',
-    path: 'assets/fisica.wav'/////////////////////////////////////AGREGAR EXTENSU¿IÓN DEL AUDIO AQUI
+    path: 'assets/lsti.mp3'
   }
 ];
 

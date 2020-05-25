@@ -21,7 +21,7 @@ export class LmyaComponent implements OnInit {
 playlist: Track[]=[
   {
     name: 'Licenciatura en Multimedia y Animación Digital',
-    path: 'assets/fisica.wav'/////////////////////////////////////AGREGAR EXTENSU¿IÓN DEL AUDIO AQUI
+    path: 'assets/lmad.mp3'
   }
 ];
 
