@@ -32,7 +32,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     SplashScreen,
     Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    {provide: Camera, useClass: CameraMock},
+    // {provide: Camera, useClass: CameraMock},
     InAppBrowser,
   ],
   bootstrap: [AppComponent]
