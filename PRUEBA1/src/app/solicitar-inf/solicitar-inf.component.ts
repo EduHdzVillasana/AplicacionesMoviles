@@ -20,6 +20,7 @@ export class SolicitarInfComponent implements OnInit {
 
   ngOnInit() {}
   
+  
   async openCamera() {
     const options: CameraOptions = {
       quality: 30,
