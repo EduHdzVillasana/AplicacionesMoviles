@@ -41,7 +41,7 @@ export class AppComponent {
         url : "licenciaturas",
       },
       {
-        title: "Concuro Ingreso",
+        title: "Concurso Ingreso",
         icon: "medal",  
         url:"concurso-in"      
       },
