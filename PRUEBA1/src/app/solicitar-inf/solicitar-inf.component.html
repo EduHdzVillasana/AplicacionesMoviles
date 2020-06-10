@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
     <ion-title >
-     Solicitar Informacion
+     Solicitar Información
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -23,7 +23,7 @@
   </ion-card>
   <ion-card>
     <ion-item>
-      <ion-label>Pais</ion-label>
+      <ion-label>País</ion-label>
       <ion-select [interfaceOptions]="PaisOptions" interface="alert" placeholder="Seleccionar" [(ngModel)]="Pais">
         <ion-select-option *ngFor="let pais of paises" >{{pais.name}}</ion-select-option>
       </ion-select>
@@ -31,7 +31,7 @@
   </ion-card>
   <ion-card>
     <ion-input placeholder="Ciudad" [(ngModel)]="Ciudad"></ion-input>
-    <ion-input placeholder="Telefono" [(ngModel)]="Telefono"></ion-input>
+    <ion-input placeholder="Teléfono" [(ngModel)]="Telefono"></ion-input>
     <ion-input placeholder="Correo" [(ngModel)]="Correo"></ion-input>
   </ion-card>
  
@@ -47,7 +47,7 @@
   
  <ion-card>
   <ion-item>
-    <ion-label position="floating" >Descripcion de su duda</ion-label>
+    <ion-label position="floating" >Descripción de su duda</ion-label>
     <ion-textarea [(ngModel)]="Descripcion" type="text"></ion-textarea>
   </ion-item>
  </ion-card>

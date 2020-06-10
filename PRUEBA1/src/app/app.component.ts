@@ -48,7 +48,7 @@ export class AppComponent {
         url:"concurso-in"      
       },
       {
-        title: "Solicitar Informacion",
+        title: "Solicitar Información",
         icon : "help",
         url: "solicitar-inf"
       },

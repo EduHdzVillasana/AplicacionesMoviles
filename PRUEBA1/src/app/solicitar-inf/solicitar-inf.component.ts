@@ -84,7 +84,7 @@ export class SolicitarInfComponent implements OnInit {
   }
 
   PaisOptions: any = {
-    header: 'Seleccionar pais'
+    header: 'Seleccionar país'
   };
   LicenciaturasOptions: any = {
     header: 'Seleccionar licenciatura'
@@ -97,16 +97,16 @@ export class SolicitarInfComponent implements OnInit {
       name:"Ciencias Computacionales"
     },
     {
-      name:"Fisica"
+      name:"Física"
     },
     {
-      name:"Matematicas"
+      name:"Matemáticas"
     },
     {
-      name:"Multimedia y Animacion"
+      name:"Multimedia y Animación"
     },
     {
-      name:"Seguridad en Tecnologia de la Informacion"
+      name:"Seguridad en Tecnología de la Información"
     },
   ]
   
