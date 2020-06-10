@@ -25,10 +25,8 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
       this.sideMenu();
-      timer(7000).subscribe(()=>this.showSplash= false)
+      timer(5000).subscribe(()=>this.showSplash= false)
     });
   }
   sideMenu(){

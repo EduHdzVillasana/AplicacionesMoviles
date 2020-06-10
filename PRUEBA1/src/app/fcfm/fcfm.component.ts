@@ -12,5 +12,8 @@ export class FCFMComponent implements OnInit {
   constructor(private route:Router) { }
 
   ngOnInit() {}
+  gotoContacto(){
+    this.route.navigate(['contacto']);
+  }
  
 }
