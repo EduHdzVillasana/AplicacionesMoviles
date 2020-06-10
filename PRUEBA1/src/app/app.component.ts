@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import{}from 'rxjs/observable/timer';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   Menu: any;
+  showSplash=true;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -25,6 +28,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.sideMenu();
+      timer(7000).subscribe(()=>this.showSplash= false)
     });
   }
   sideMenu(){

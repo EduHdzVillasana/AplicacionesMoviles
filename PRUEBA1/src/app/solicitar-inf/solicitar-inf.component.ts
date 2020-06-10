@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import {DomSanitizer} from '@angular/platform-browser';
- 
-
-
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-solicitar-inf',
@@ -12,19 +10,29 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class SolicitarInfComponent implements OnInit {
   image: any = null;
+  Nombre="";
+  Apellidos="";
+  Pais="";
+  Ciudad="";
+  Telefono="";
+  Correo="";
+  Licenciatura="";
+  Descripcion="";
+ 
 
   constructor(
     private camera: Camera,
     public _DomSanitizer: DomSanitizer,
+    private emailComposer: EmailComposer
+
   ) { }
 
   ngOnInit() {}
   
-  
   async openCamera() {
     const options: CameraOptions = {
       quality: 30,
-      destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     };
@@ -33,16 +41,46 @@ export class SolicitarInfComponent implements OnInit {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       
-      const base64Image = 'data:image/jpeg;base64,' + imageData;
+      // const base64Image = 'data:image/jpeg;base64,' + imageData;
       // const base64Image = imageData;
-      this.image = base64Image;
-      console.log(this.image);
-            }
-            
+      this.image = imageData;
+      // console.log(this.image);
+      //       }
         
-    , (err) => {
+    }, (err) => {
+      // console.log('Image error: ', err);
       // Handle error
     });
+  }
+  sendmail() {
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available) {
+        //Now we know we can send
+      }
+     });
+     var strbody="<body style='margin: 0; padding: 0;'>" +
+     "<table border='1' cellpadding='0' cellspacing='0' width='100%'>"  +
+     "<tr><td>Nombre:" + this.Nombre + " " + this.Apellidos + "</td></tr><br>" +
+     "<tr><td>País:" + this.Pais + " " + "</td></tr><br>" +
+     "<tr><td> Ciudad:" + this.Ciudad + " " + "</td></tr><br>" +
+     "<tr><td> Telefono:" + this.Telefono + " " + "</td></tr><br>" +
+     "<tr><td> Correo:" + this.Correo + " " + "</td></tr><br>" +
+     "<tr><td> Licenciatura:" + this.Licenciatura + " " + "</td></tr><br>" +
+     "<tr><td> Descripcion de su duda:" + this.Descripcion + " " + "</td></tr><br>" +
+     "</table></body>";
+     let email = {
+       to: 'fcfmpruebas1@gmail.com',
+       cc: 'destinydelafuente@hotmail.com',
+       attachments: [
+          this.image
+       ],
+       subject:'Solicitar información',
+       body: strbody,
+       isHtml: true
+     }
+     
+     // Send a text message using default options
+     this.emailComposer.open(email);
   }
 
   PaisOptions: any = {

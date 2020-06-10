@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
       <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -9,46 +9,55 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Nombre(s)</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Apellidos</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Nombre(s)</ion-label>
+      <ion-input [(ngModel)]="Nombre"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input [(ngModel)]="Apellidos"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
       <ion-label>Pais</ion-label>
-      <ion-select [interfaceOptions]="PaisOptions" interface="alert" placeholder="Seleccionar" >
+      <ion-select [interfaceOptions]="PaisOptions" interface="alert" placeholder="Seleccionar" [(ngModel)]="Pais">
         <ion-select-option *ngFor="let pais of paises" >{{pais.name}}</ion-select-option>
       </ion-select>
-      
   </ion-item>
-  <ion-input placeholder="Ciudad"></ion-input>
-  <ion-input placeholder="Telefono"></ion-input>
-  <ion-input placeholder="Correo"></ion-input>
+  </ion-card>
+  <ion-card>
+    <ion-input placeholder="Ciudad" [(ngModel)]="Ciudad"></ion-input>
+    <ion-input placeholder="Telefono" [(ngModel)]="Telefono"></ion-input>
+    <ion-input placeholder="Correo" [(ngModel)]="Correo"></ion-input>
+  </ion-card>
  
+  
+ <ion-card>
   <ion-item>
     <ion-label>Licenciaturas</ion-label>
-    <ion-select [interfaceOptions]="LicenciaturasOptions" interface="action-sheet"  placeholder="Seleccionar">
+    <ion-select [interfaceOptions]="LicenciaturasOptions" interface="action-sheet"  placeholder="Seleccionar" [(ngModel)]="Licenciatura">
       <ion-select-option *ngFor="let lic of licenciaturas" >{{lic.name}}</ion-select-option>
     </ion-select>
   </ion-item>
+ </ion-card>
+  
+ <ion-card>
   <ion-item>
-    <ion-label position="floating">Descripcion de su duda</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-label position="floating" >Descripcion de su duda</ion-label>
+    <ion-textarea [(ngModel)]="Descripcion" type="text"></ion-textarea>
   </ion-item>
+ </ion-card>
+  
   <ion-button expand="block" fill="clear" strong="true"  (click)="openCamera()" >
-    Tomar Foto
     <ion-icon name="camera-outline" size="large" slot="end" ></ion-icon>
   </ion-button>
-  <!-- <ion-img [src]="image"></ion-img> -->
-  <img [src]="image"/>
   <br>
-  <br>
-  <br>
-  <ion-button color="success"expand="block" fill="solid" strong="true"  >
-    Enviar
-    <ion-icon name="send-outline"  slot="end" ></ion-icon>
+  <ion-button color="success"expand="block" fill="solid" strong="true" (click)="sendmail();"  >
+    Enviar Correo
+    <ion-icon name="mail-outline"  slot="end" ></ion-icon>
   </ion-button>
 </ion-content>

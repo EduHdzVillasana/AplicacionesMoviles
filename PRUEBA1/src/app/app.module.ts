@@ -17,6 +17,7 @@ import{ModalLmyaModule}from './modal-lmya/modal-lmya.module'
 import{ModalLstiModule} from './modal-lsti/modal-lsti.module'
 import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     StatusBar,
     SplashScreen,
     Camera,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     // {provide: Camera, useClass: CameraMock},
     InAppBrowser,
