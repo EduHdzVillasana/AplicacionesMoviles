@@ -99,9 +99,7 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       },
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-email-composer": {
-        "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      }
+      "cordova-plugin-email-composer": {}
     },
     "platforms": [
       "android",
