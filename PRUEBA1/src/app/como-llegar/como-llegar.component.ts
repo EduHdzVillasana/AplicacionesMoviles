@@ -10,7 +10,7 @@ declare var google;//
   templateUrl: './como-llegar.component.html',
   styleUrls: ['./como-llegar.component.scss'],
 })
-export class ComoLlegarComponent implements OnInit {
+export class ComoLlegarComponent {
 
   address: string;
 
@@ -69,8 +69,8 @@ export class ComoLlegarComponent implements OnInit {
     this.directionsDisplay.setPanel(indicatorsEle);
     google.maps.event.addListenerOnce(this.mapRef, 'idle', () => {
       loading.dismiss();
-      this.addMaker(myLatLng.lat, myLatLng.lng);
-      this.addMaker(25.725695, -100.315135)
+      //this.addMaker(myLatLng.lat, myLatLng.lng);
+      //this.addMaker(25.725695, -100.315135)
       this.calculateRoute(myLatLng.lat, myLatLng.lng);
     });
 
