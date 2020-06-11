@@ -18,6 +18,8 @@ import{ModalLstiModule} from './modal-lsti/modal-lsti.module'
 import{ModalMatematicasModule} from './modal-matematicas/modal-matematicas.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     SplashScreen,
     Camera,
     EmailComposer,
+    Geolocation,
+    NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     // {provide: Camera, useClass: CameraMock},
     InAppBrowser,
