@@ -4,6 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import{}from 'rxjs/observable/timer';
 import { timer } from 'rxjs';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private androidPermissions: AndroidPermissions
   ) {
     this.sideMenu();
     this.initializeApp();
@@ -25,7 +27,27 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.androidPermissions.requestPermissions([
+        this.androidPermissions.PERMISSION.CAMERA,
+        this.androidPermissions.PERMISSION.GET_ACCOUNTS,
+        this.androidPermissions.PERMISSION.ACCESS_BACKGROUND_LOCATION,
+        this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION,
+        this.androidPermissions.PERMISSION.ACCESS_NETWORK_STATE,
+        this.androidPermissions.PERMISSION.READ_PHONE_STATE,
+        this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION,
+        this.androidPermissions.PERMISSION.ACCESS_NOTIFICATION_POLICY,
+        this.androidPermissions.PERMISSION.ANSWER_PHONE_CALLS,
+        this.androidPermissions.PERMISSION.CALL_PHONE,
+        this.androidPermissions.PERMISSION.INTERNET
+
+      ]);
+      this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.CAMERA).then(
+        result => console.log('Has permission?', result.hasPermission),
+        err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA)
+      ); 
       this.sideMenu();
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
       timer(5000).subscribe(()=>this.showSplash= false)
     });
   }
