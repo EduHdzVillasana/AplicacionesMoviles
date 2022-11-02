@@ -36,7 +36,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.0.2",
     "babel": "^6.23.0",
     "cordova": "^9.0.0",
-    "cordova-android": "^7.1.1",
+    "cordova-android": "^11.0.0",
     "cordova-browser": "6.0.0",
     "cordova-plugin-android-permissions": "^1.0.2",
     "cordova-plugin-camera": "^4.1.0",
